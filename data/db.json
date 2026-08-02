@@ -1,0 +1,162 @@
+{
+  "scenarios": [
+    {
+      "id": "baseline-energy-risk",
+      "name": "能源与供应链压力基线",
+      "hypothesis": "如果极端天气、能源价格和物流节点同时承压，则关键城市群供应链风险将在 30 天内上升。",
+      "status": "验证中",
+      "year": 2026,
+      "parameters": {
+        "climate": 62,
+        "economy": 55,
+        "population": 48,
+        "resources": 70
+      },
+      "createdAt": "2026-08-02T00:00:00.000Z",
+      "history": [
+        {
+          "phase": "创建",
+          "note": "建立基线场景",
+          "at": "2026-08-02T00:00:00.000Z"
+        },
+        {
+          "phase": "推演",
+          "note": "生成首轮风险传播路径",
+          "at": "2026-08-02T00:05:00.000Z"
+        }
+      ]
+    }
+  ],
+  "worldState": {
+    "geo": [
+      {
+        "id": "yangtze-delta",
+        "name": "长三角城市群",
+        "lon": 121.47,
+        "lat": 31.23,
+        "score": 81,
+        "trend": 4
+      },
+      {
+        "id": "bay-area",
+        "name": "旧金山湾区",
+        "lon": -122.42,
+        "lat": 37.77,
+        "score": 74,
+        "trend": 2
+      },
+      {
+        "id": "north-sea",
+        "name": "北海能源带",
+        "lon": 3.2,
+        "lat": 56.1,
+        "score": 69,
+        "trend": -1
+      }
+    ],
+    "climate": [
+      {
+        "id": "heat-asia",
+        "name": "东亚高温风险",
+        "lon": 116.4,
+        "lat": 39.9,
+        "score": 76,
+        "trend": 7
+      },
+      {
+        "id": "atlantic-storm",
+        "name": "大西洋风暴带",
+        "lon": -55,
+        "lat": 24,
+        "score": 66,
+        "trend": 5
+      },
+      {
+        "id": "australia-dry",
+        "name": "澳洲干旱压力",
+        "lon": 134,
+        "lat": -25,
+        "score": 58,
+        "trend": -2
+      }
+    ],
+    "economy": [
+      {
+        "id": "chip-chain",
+        "name": "芯片供应链",
+        "lon": 121,
+        "lat": 24,
+        "score": 83,
+        "trend": 6
+      },
+      {
+        "id": "shipping",
+        "name": "全球海运指数",
+        "lon": 103,
+        "lat": 1.3,
+        "score": 71,
+        "trend": 3
+      },
+      {
+        "id": "rates",
+        "name": "利率敏感资产",
+        "lon": -74,
+        "lat": 40.7,
+        "score": 64,
+        "trend": -3
+      }
+    ],
+    "population": [
+      {
+        "id": "megacity-health",
+        "name": "超大城市公共服务",
+        "lon": 77.2,
+        "lat": 28.6,
+        "score": 79,
+        "trend": 4
+      },
+      {
+        "id": "migration",
+        "name": "气候迁移压力",
+        "lon": 31.2,
+        "lat": 30,
+        "score": 68,
+        "trend": 6
+      },
+      {
+        "id": "aging",
+        "name": "老龄化保障压力",
+        "lon": 139.7,
+        "lat": 35.7,
+        "score": 73,
+        "trend": 1
+      }
+    ],
+    "resources": [
+      {
+        "id": "water",
+        "name": "跨境水资源",
+        "lon": 90.4,
+        "lat": 29.6,
+        "score": 75,
+        "trend": 5
+      },
+      {
+        "id": "lithium",
+        "name": "锂矿供应",
+        "lon": -68,
+        "lat": -23,
+        "score": 82,
+        "trend": 8
+      },
+      {
+        "id": "grain",
+        "name": "粮食主产区",
+        "lon": 32,
+        "lat": 49,
+        "score": 70,
+        "trend": -4
+      }
+    ]
+  }
+}
