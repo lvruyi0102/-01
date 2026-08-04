@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数字地球推演平台</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="module earth-module">
+        <header><span>01</span><div><h1>数字地球主控台</h1><p>Canvas 2D 地球可视化 · 全局统计 · 时间轴回溯/未来推演</p></div></header>
+        <canvas id="earth"></canvas>
+        <div class="hud"><b id="eventCount">0</b><small>世界状态点</small><b id="riskScore">--</b><small>综合风险</small><b id="currentYear">2026</b><small>时间轴</small></div>
+        <input id="timeline" type="range" min="2020" max="2035" value="2026" />
+        <div id="liveFeed" class="live-feed"></div>
+      </section>
+
+      <section class="module database-module">
+        <header><span>02</span><div><h2>世界状态数据库</h2><p>地理 / 气候 / 经济 / 人口 / 资源 分层查询</p></div></header>
+        <div id="layerTabs" class="tabs"></div>
+        <ul id="worldList" class="data-list"></ul>
+      </section>
+
+      <section class="module graph-module">
+        <header><span>03</span><div><h2>因果关系网络</h2><p>力导向图谱 · 节点拖拽 · 路径追踪 · 权重展示</p></div></header>
+        <svg id="causalGraph" viewBox="0 0 640 360"></svg>
+      </section>
+
+      <section class="module hypothesis-module">
+        <header><span>04</span><div><h2>假设推演中心</h2><p>创建 → 推演 → 验证 → 归档</p></div></header>
+        <select id="scenarioSelect" aria-label="选择推演场景"></select>
+        <input id="scenarioName" placeholder="推演场景名称" value="关键资源冲击推演" />
+        <textarea id="hypothesis">如果关键资源供应下降且气候风险上升，则主要城市群的供应链韧性将下降。</textarea>
+        <div class="params" id="params"></div>
+        <div class="actions"><button id="createScenario">创建场景</button><button id="simulateScenario">推演/验证</button><button id="archiveScenario">归档</button></div>
+        <ol id="lifecycle" class="timeline-list"></ol>
+      </section>
+
+      <section class="module lab-module">
+        <header><span>05</span><div><h2>现实校准实验室</h2><p>数据源接入 · 偏差自动校准 · 错误归因定位</p></div></header>
+        <div class="actions"><button id="syncRealWorld">同步外部数据源</button></div>
+        <div id="calibration" class="calibration"></div>
+      </section>
+
+      <section class="module debate-module">
+        <header><span>06</span><div><h2>多智能体辩论厅</h2><p>正方 / 反方 / 中立 三方论证</p></div></header>
+        <div id="debate" class="debate"></div>
+      </section>
+
+      <section class="module simulator-module">
+        <header><span>07</span><div><h2>影响模拟器</h2><p>多维政策影响模拟 · 多方案对比</p></div></header>
+        <div id="impact" class="impact-grid"></div>
+      </section>
+
+      <section class="module advice-module">
+        <header><span>08</span><div><h2>行动建议中心</h2><p>按优先级 / 影响范围 / 实施难度分级</p></div></header>
+        <div id="advice" class="advice-list"></div>
+      </section>
+    </main>
+    <script src="/src/main.js"></script>
+  </body>
+</html>
