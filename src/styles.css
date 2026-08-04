@@ -38,3 +38,10 @@ textarea { min-height: 90px; resize: vertical; }
 .advice-list small { color: #8fa4c0; }
 @media (max-width: 1200px) { .app { grid-template-columns: 1fr 1fr; } .earth-module { grid-column: 1 / -1; } }
 @media (max-width: 760px) { .app { grid-template-columns: 1fr; } #earth { height: 330px; } .hud, .impact-grid { grid-template-columns: 1fr; } }
+.live-feed { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.live-feed span { border: 1px solid #ffffff18; border-radius: 999px; padding: 7px 10px; color: #b9cce5; background: #ffffff0c; font-size: 12px; }
+.live-feed .synced { color: #c9ff7b; border-color: #baff6355; }
+.live-feed .warning { color: #ffd47b; border-color: #ffd47b55; }
+.hypothesis-module select { width: 100%; color: #f8fbff; background: #020711cc; border: 1px solid #ffffff20; border-radius: 16px; padding: 12px; margin-bottom: 10px; outline: none; }
+#causalGraph line.active { stroke: #caff63; }
+#causalGraph g.selected circle { fill: #244d20; stroke: #f7ff8a; filter: drop-shadow(0 0 10px #caff63); }

@@ -13,6 +13,7 @@
         <canvas id="earth"></canvas>
         <div class="hud"><b id="eventCount">0</b><small>世界状态点</small><b id="riskScore">--</b><small>综合风险</small><b id="currentYear">2026</b><small>时间轴</small></div>
         <input id="timeline" type="range" min="2020" max="2035" value="2026" />
+        <div id="liveFeed" class="live-feed"></div>
       </section>
 
       <section class="module database-module">
@@ -28,6 +29,7 @@
 
       <section class="module hypothesis-module">
         <header><span>04</span><div><h2>假设推演中心</h2><p>创建 → 推演 → 验证 → 归档</p></div></header>
+        <select id="scenarioSelect" aria-label="选择推演场景"></select>
         <input id="scenarioName" placeholder="推演场景名称" value="关键资源冲击推演" />
         <textarea id="hypothesis">如果关键资源供应下降且气候风险上升，则主要城市群的供应链韧性将下降。</textarea>
         <div class="params" id="params"></div>
@@ -37,6 +39,7 @@
 
       <section class="module lab-module">
         <header><span>05</span><div><h2>现实校准实验室</h2><p>数据源接入 · 偏差自动校准 · 错误归因定位</p></div></header>
+        <div class="actions"><button id="syncRealWorld">同步外部数据源</button></div>
         <div id="calibration" class="calibration"></div>
       </section>
 

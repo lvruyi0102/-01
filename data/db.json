@@ -158,5 +158,28 @@
         "trend": -4
       }
     ]
-  }
+  },
+  "dataSources": [
+    {
+      "id": "usgs-earthquakes",
+      "name": "USGS Earthquakes",
+      "type": "地理/灾害",
+      "status": "configured",
+      "lastSync": null
+    },
+    {
+      "id": "open-meteo",
+      "name": "Open-Meteo Current Weather",
+      "type": "气候",
+      "status": "configured",
+      "lastSync": null
+    },
+    {
+      "id": "worldbank",
+      "name": "World Bank Indicators",
+      "type": "经济/人口",
+      "status": "configured",
+      "lastSync": null
+    }
+  ]
 }
