@@ -19,4 +19,4 @@ python3 -m http.server 8000
 
 ## 发布到 GitHub Pages
 
-仓库已包含 GitHub Pages 自动部署工作流：将默认分支设为 `main`，在 GitHub 仓库 **Settings → Pages → Build and deployment** 中选择 **GitHub Actions**，然后推送到 `main` 或在 **Actions** 页面手动运行 `Deploy NOVA to GitHub Pages`。部署完成后，GitHub 会在该工作流的 `Deploy` 步骤显示公开地址。
+仓库已包含 GitHub Pages 自动部署工作流：将默认分支设为 `main`，在 GitHub 仓库 **Settings → Pages → Build and deployment** 中选择 **GitHub Actions**，然后推送到 `main` 或预览分支 `work`；也可以在 **Actions** 页面手动运行 `Deploy NOVA to GitHub Pages`。部署完成后，GitHub 会在该工作流的 `Deploy` 步骤显示公开地址。
