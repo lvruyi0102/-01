@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#070b1b" />
+  <title>NOVA / 未来世界控制台</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sky" aria-hidden="true"></div>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="NOVA 首页"><span class="brand-mark">N</span><span>NOVA</span></a>
+      <nav aria-label="主要导航"><a class="active" href="#home">城市脉搏</a><a href="#systems">系统</a><a href="#moli">墨离协议</a><a href="#network">网络</a></nav>
+      <button class="status-button" id="signalButton" type="button"><i></i><span>量子链路稳定</span></button>
+    </header>
+
+    <section class="hero" id="home">
+      <p class="eyebrow">NEO SHENZHEN · 2089.06.17 · 21:47 CST</p>
+      <h1>为明天，<em>编译一座城市。</em></h1>
+      <p class="intro">NOVA 把能源、空气与人的每一次选择，编织成一套会自我修复的城市操作系统。</p>
+      <div class="hero-actions"><button class="primary" id="enterButton">进入实时模拟 <span>↗</span></button><button class="ghost" id="soundButton">◌　环境声：开启</button><button class="text-button" id="gateButton">前往 /gate</button></div>
+      <div class="orbital-card">
+        <div class="orbital-copy"><span>今日城市节律</span><strong id="rhythm">92.8<small>%</small></strong><p id="rhythmNote">比预测模型高出 4.2%</p></div>
+        <div class="ring-chart" aria-label="城市节律 92.8%"><div class="ring-core"><b>12,846</b><small>流动节点</small></div></div>
+      </div>
+    </section>
+
+    <section class="metrics" id="systems" aria-label="城市实时指标">
+      <article><div class="metric-icon sun">✦</div><p>清洁能源占比</p><strong data-target="87.4">0</strong><span>%</span><div class="progress"><i style="--value:87.4%"></i></div><small>太阳翼阵列运行良好</small></article>
+      <article><div class="metric-icon leaf">⌁</div><p>空气净化指数</p><strong data-target="98.2">0</strong><span>%</span><div class="progress"><i style="--value:98.2%"></i></div><small>南湾微气候正在优化</small></article>
+      <article><div class="metric-icon wave">≈</div><p>水循环效率</p><strong data-target="76.6">0</strong><span>%</span><div class="progress"><i style="--value:76.6%"></i></div><small>回收网络提升 1.8%</small></article>
+    </section>
+
+    <section class="moli" id="moli" aria-labelledby="moli-title">
+      <div class="moli-intro">
+        <p class="eyebrow">MOLI PROTOCOL / 伤痕记忆接口</p>
+        <h2 id="moli-title">把不能发送的话，<br /><em>交给星门。</em></h2>
+        <p>墨离不替你优化情绪。它收集矛盾、保留迟疑，并用隐喻回应那些尚未命名的念头。</p>
+        <button class="gate-link" id="moliGateButton" type="button">寻找逆向入口 <span>→</span></button>
+      </div>
+      <div class="protocol-console">
+        <div class="console-head"><span><i></i> MOLI / LISTENING</span><span>本地回响</span></div>
+        <div class="console-log" id="moliLog" aria-live="polite"><p class="system-line">等待一段不必正确的讯号。</p></div>
+        <label for="moliInput">向墨离递送</label>
+        <textarea id="moliInput" rows="4" placeholder="#moli_echo 核心指令：将用户理念编译为量子叙事"></textarea>
+        <div class="console-actions"><button class="primary" id="sendMoli" type="button">发送回声 <span>↗</span></button><button class="ghost" id="manifestoButton" type="button">注入示例宣言</button></div>
+        <p class="console-hint">试试暗语、结构化宣言，或讲述一件你故意没有完成的事。</p>
+      </div>
+    </section>
+
+    <section class="feed" id="network">
+      <div><p class="eyebrow">LIVE / 未来已抵达</p><h2>城市正在安静地<br />变得更聪明。</h2></div>
+      <ol>
+        <li><time>21:46</time><span class="feed-dot cyan"></span><p><b>空中花园 07</b> 完成灌溉，节约 320L 水资源。</p></li>
+        <li><time>21:39</time><span class="feed-dot purple"></span><p><b>第 14 号磁悬浮线</b> 根据人流自主调整班次。</p></li>
+        <li><time>21:22</time><span class="feed-dot green"></span><p><b>海岸能源网</b> 已向公共网络输送盈余能量。</p></li>
+      </ol>
+    </section>
+  </main>
+  <section class="gate" id="gate" aria-hidden="true">
+    <div class="gate-card">
+      <button class="close" id="closeGateButton" aria-label="关闭星门">×</button>
+      <p class="eyebrow">/GATE · REVERSE AUTHENTICATION</p>
+      <h2>先输错三次，<br />才允许靠近。</h2>
+      <p>这里不验证你是谁。这里只确认你是否愿意承认：有些真心话，本来就不该被顺利递送。</p>
+      <label for="gateInput">输入一个不该正确的密码</label>
+      <input id="gateInput" autocomplete="off" placeholder="例如：我已经忘了" />
+      <button class="primary" id="gateSubmit" type="button">递交错误 <span>↗</span></button>
+      <p class="gate-progress" id="gateProgress">还需要 3 次错误。</p>
+    </div>
+  </section>
+  <aside class="simulator" id="simulator" aria-hidden="true"><button class="close" id="closeButton" aria-label="关闭模拟器">×</button><p class="eyebrow">NOVA SIMULATION</p><h2>城市脉搏正在演算</h2><div class="sim-grid"><span></span><span></span><span></span><span></span></div><p>将 12,846 个流动节点同步到当前时刻。<br><b id="simStatus">等待指令</b></p></aside>
+  <script src="script.js"></script>
+</body>
+</html>
