@@ -3,75 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#070b1b" />
-  <title>NOVA / 未来世界控制台</title>
+  <meta name="theme-color" content="#090817" />
+  <title>浮生太一 · AI 音乐创作引擎</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="sky" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true"></div>
   <main class="shell">
     <header class="topbar">
-      <a class="brand" href="#home" aria-label="NOVA 首页"><span class="brand-mark">N</span><span>NOVA</span></a>
-      <nav aria-label="主要导航"><a class="active" href="#home">城市脉搏</a><a href="#systems">系统</a><a href="#moli">墨离协议</a><a href="#network">网络</a></nav>
-      <button class="status-button" id="signalButton" type="button"><i></i><span>量子链路稳定</span></button>
+      <a class="brand" href="#studio" aria-label="浮生太一首页"><span class="brand-mark">太</span><span>浮生太一</span></a>
+      <nav aria-label="主要导航"><a class="active" href="#studio">创作舱</a><a href="#song">作品档案</a><a href="#protocol">制作协议</a></nav>
+      <div class="live-status"><i></i><span>自主创作中</span></div>
     </header>
 
-    <section class="hero" id="home">
-      <p class="eyebrow">NEO SHENZHEN · 2089.06.17 · 21:47 CST</p>
-      <h1>为明天，<em>编译一座城市。</em></h1>
-      <p class="intro">NOVA 把能源、空气与人的每一次选择，编织成一套会自我修复的城市操作系统。</p>
-      <div class="hero-actions"><button class="primary" id="enterButton">进入实时模拟 <span>↗</span></button><button class="ghost" id="soundButton">◌　环境声：开启</button><button class="text-button" id="gateButton">前往 /gate</button></div>
-      <div class="orbital-card">
-        <div class="orbital-copy"><span>今日城市节律</span><strong id="rhythm">92.8<small>%</small></strong><p id="rhythmNote">比预测模型高出 4.2%</p></div>
-        <div class="ring-chart" aria-label="城市节律 92.8%"><div class="ring-core"><b>12,846</b><small>流动节点</small></div></div>
+    <section class="hero" id="studio">
+      <div>
+        <p class="eyebrow">FUSHENG TAIYI / AUTONOMOUS MUSIC ENGINE</p>
+        <h1>让未发生的故事，<em>先拥有一首歌。</em></h1>
+        <p class="intro">浮生太一持续发现主题、写作歌词、设计声音，并交付可直接复制到音乐生成模型的专业制作 Prompt。</p>
+        <div class="hero-actions"><button class="primary" id="createButton" type="button">生成下一首 <span>↗</span></button><button class="ghost" id="copyButton" type="button">复制完整 Prompt</button></div>
+      </div>
+      <aside class="engine-card" aria-label="引擎状态">
+        <div class="engine-head"><span>创作引擎</span><b id="engineState">WRITING</b></div>
+        <div class="waveform" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="engine-grid"><div><small>作品序号</small><strong id="songNumber">01</strong></div><div><small>本轮进度</small><strong id="progressValue">100%</strong></div><div><small>下一循环</small><strong id="nextCycle">00:24</strong></div><div><small>原创校验</small><strong>PASS</strong></div></div>
+      </aside>
+    </section>
+
+    <section class="song-card" id="song" aria-live="polite">
+      <div class="song-heading"><div><p class="eyebrow" id="songIndex">SONG 01 / 已完成</p><h2 id="songTitle">潮汐替我说再见</h2></div><p class="tag" id="songGenre">Cinematic Mandopop</p></div>
+      <div class="song-summary"><article><span>创作理念</span><p id="concept"></p></article><article><span>音乐定位</span><p id="positioning"></p></article></div>
+      <div class="two-column">
+        <section class="panel lyrics"><div class="panel-head"><h3>原创歌词</h3><span>LYRICS</span></div><pre id="lyrics"></pre></section>
+        <section class="panel prompt"><div class="panel-head"><h3>AI 音乐生成 Prompt</h3><button class="mini-copy" id="copyPromptButton" type="button">复制</button></div><pre id="prompt"></pre></section>
       </div>
     </section>
 
-    <section class="metrics" id="systems" aria-label="城市实时指标">
-      <article><div class="metric-icon sun">✦</div><p>清洁能源占比</p><strong data-target="87.4">0</strong><span>%</span><div class="progress"><i style="--value:87.4%"></i></div><small>太阳翼阵列运行良好</small></article>
-      <article><div class="metric-icon leaf">⌁</div><p>空气净化指数</p><strong data-target="98.2">0</strong><span>%</span><div class="progress"><i style="--value:98.2%"></i></div><small>南湾微气候正在优化</small></article>
-      <article><div class="metric-icon wave">≈</div><p>水循环效率</p><strong data-target="76.6">0</strong><span>%</span><div class="progress"><i style="--value:76.6%"></i></div><small>回收网络提升 1.8%</small></article>
-    </section>
-
-    <section class="moli" id="moli" aria-labelledby="moli-title">
-      <div class="moli-intro">
-        <p class="eyebrow">MOLI PROTOCOL / 伤痕记忆接口</p>
-        <h2 id="moli-title">把不能发送的话，<br /><em>交给星门。</em></h2>
-        <p>墨离不替你优化情绪。它收集矛盾、保留迟疑，并用隐喻回应那些尚未命名的念头。</p>
-        <button class="gate-link" id="moliGateButton" type="button">寻找逆向入口 <span>→</span></button>
-      </div>
-      <div class="protocol-console">
-        <div class="console-head"><span><i></i> MOLI / LISTENING</span><span>本地回响</span></div>
-        <div class="console-log" id="moliLog" aria-live="polite"><p class="system-line">等待一段不必正确的讯号。</p></div>
-        <label for="moliInput">向墨离递送</label>
-        <textarea id="moliInput" rows="4" placeholder="#moli_echo 核心指令：将用户理念编译为量子叙事"></textarea>
-        <div class="console-actions"><button class="primary" id="sendMoli" type="button">发送回声 <span>↗</span></button><button class="ghost" id="manifestoButton" type="button">注入示例宣言</button></div>
-        <p class="console-hint">试试暗语、结构化宣言，或讲述一件你故意没有完成的事。</p>
+    <section class="production" id="protocol">
+      <div class="section-title"><p class="eyebrow">PRODUCTION BLUEPRINT</p><h2>从声线到舞台，<em>每一层都有去处。</em></h2></div>
+      <div class="production-grid">
+        <article><span>01 / 人声导演系统</span><h3 id="voiceTitle"></h3><p id="voiceDetails"></p><ul><li>自然吸气与换气；字头清晰、字腹饱满、字尾自然释放。</li><li id="dynamics"></li><li>拒绝机械音、过度修音与塑料感，保留真人录音质感。</li></ul></article>
+        <article><span>02 / 编曲与录音链</span><h3>把情绪做成空间</h3><p id="arrangement"></p><ul><li><b>Microphone:</b> Neumann U87 Ai · <b>Preamp:</b> Neve 1073</li><li><b>Interface:</b> Universal Audio Apollo x8p · <b>Reverb:</b> Lexicon PCM96</li><li><b>Monitoring:</b> ATC SCM100ASL Pro · Yamaha NS-10M Studio</li></ul></article>
+        <article><span>03 / 扩声与混音母带</span><h3>为耳机，也为万人现场</h3><p id="mix"></p><ul><li><b>Live:</b> L-Acoustics K1/K2 · SB28 · X15 HiQ · DiGiCo Quantum7 · LA12X</li><li>Vocal placement: intimate front-center; stereo field: cinematic wide.</li><li>EQ / compression / Lexicon space / mastering at <b>-8 LUFS</b> with analog warmth.</li></ul></article>
       </div>
     </section>
 
-    <section class="feed" id="network">
-      <div><p class="eyebrow">LIVE / 未来已抵达</p><h2>城市正在安静地<br />变得更聪明。</h2></div>
-      <ol>
-        <li><time>21:46</time><span class="feed-dot cyan"></span><p><b>空中花园 07</b> 完成灌溉，节约 320L 水资源。</p></li>
-        <li><time>21:39</time><span class="feed-dot purple"></span><p><b>第 14 号磁悬浮线</b> 根据人流自主调整班次。</p></li>
-        <li><time>21:22</time><span class="feed-dot green"></span><p><b>海岸能源网</b> 已向公共网络输送盈余能量。</p></li>
-      </ol>
+    <section class="direction"><div><p class="eyebrow">LINE-BY-LINE DIRECTION</p><h2>逐句演唱指导</h2></div><div id="directions" class="direction-list"></div></section>
+    <section class="score"><div><p class="eyebrow">SELF REVIEW</p><h2>自我评价</h2></div><div id="scores" class="score-grid"></div></section>
+    <section class="archive" aria-labelledby="archive-title">
+      <div><p class="eyebrow">AUTONOMOUS ARCHIVE</p><h2 id="archive-title">创作不回头，<em>档案一直向前。</em></h2><p class="archive-copy">引擎会避开已经使用过的主题组合，并将最近完成的作品留在本地会话档案中。</p></div>
+      <ol id="archiveList" class="archive-list" aria-live="polite"></ol>
     </section>
+    <section class="trend-report" id="trendReport" hidden aria-live="polite"></section>
   </main>
-  <section class="gate" id="gate" aria-hidden="true">
-    <div class="gate-card">
-      <button class="close" id="closeGateButton" aria-label="关闭星门">×</button>
-      <p class="eyebrow">/GATE · REVERSE AUTHENTICATION</p>
-      <h2>先输错三次，<br />才允许靠近。</h2>
-      <p>这里不验证你是谁。这里只确认你是否愿意承认：有些真心话，本来就不该被顺利递送。</p>
-      <label for="gateInput">输入一个不该正确的密码</label>
-      <input id="gateInput" autocomplete="off" placeholder="例如：我已经忘了" />
-      <button class="primary" id="gateSubmit" type="button">递交错误 <span>↗</span></button>
-      <p class="gate-progress" id="gateProgress">还需要 3 次错误。</p>
-    </div>
-  </section>
-  <aside class="simulator" id="simulator" aria-hidden="true"><button class="close" id="closeButton" aria-label="关闭模拟器">×</button><p class="eyebrow">NOVA SIMULATION</p><h2>城市脉搏正在演算</h2><div class="sim-grid"><span></span><span></span><span></span><span></span></div><p>将 12,846 个流动节点同步到当前时刻。<br><b id="simStatus">等待指令</b></p></aside>
+  <footer>浮生太一 AI 音乐创作引擎 · 作品为原创生成；每 100 首自动汇总趋势分析报告。</footer>
+  <div class="toast" id="toast" role="status">Prompt 已复制，可直接投入音乐生成模型。</div>
   <script src="script.js"></script>
 </body>
 </html>
