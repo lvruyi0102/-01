@@ -1,61 +1,54 @@
-const works = [
-  {
-    title: '潮汐替我说再见', genre: 'Cinematic Mandopop',
-    concept: '故事发生在台风登陆前的海港。一个人把没能说出口的告别交给潮水，等城市亮起第一盏灯时，终于允许自己转身。核心情绪是克制后的释然：离开并不是遗忘，而是学会温柔地放过。',
-    positioning: 'Genre: Cinematic Mandopop / Ambient Pop · BPM: 82 · Key: D major · Mood: nocturnal, tender, tidal, cathartic · Era: contemporary 2020s · Target Scene: film end credits, night drive, oceanfront farewell.',
-    lyrics: '【主歌】\n潮水把路灯一盏盏推远\n你没说完的名字 漂在鞋边\n我把伞收起 像收起昨天\n让风替我练习 一次道别\n\n【预副歌】\n原来不是每一艘船\n都要停在同一片岸\n\n【副歌】\n潮汐替我说再见\n在你回头以前\n我把眼泪还给海面\n把温柔留在从前\n若某天月光又落在肩\n请相信我 已经走得很远',
-    voiceTitle: 'Female intimate alto · 近距离、温暖而带有轻微沙砾感的中低音',
-    voiceDetails: '主歌贴近耳语，像在空港里写一封没有地址的信；副歌打开胸腔共鸣，但不靠喊叫取胜。情绪从疲惫克制，缓慢推向含泪的坚定与希望。',
-    dynamics: '动态曲线：主歌 35% · 预副歌 55% · 副歌 82% · 最后一句高潮 100%，随后自然回落。',
-    arrangement: '82 BPM 的 felt piano 作为潮水般的脉冲，远处的电吉他泛音与低频合成器托住空间；副歌加入宽阔弦乐、tom 组与反向钢琴尾音，结尾仅留海浪质感与呼吸。',
-    mix: '主唱稳定置于前方中心，保留贴耳呼吸；钢琴窄而清晰，弦乐在左右大幅展开，低频克制深沉。U87 的近讲质地进入 Neve 饱和，PCM96 长尾在副歌才完全绽放。',
-    directions: [['潮水把路灯一盏盏推远', '“潮”字轻起，唱完“远”后吸气半拍，让空气声保留。'], ['原来不是每一艘船', '“不”字压低力度，“船”字末尾给极轻的颤音。'], ['潮汐替我说再见', '“替我”连音推进，“再见”两个字打开胸腔，作为第一次情绪峰值。'], ['请相信我 已经走得很远', '“相信”带一点哽咽；“很远”全量爆发后自然释放，不拖拍。']],
-    scores: [96, 94, 98, 90, 97],
-    prompt: 'Cinematic music production, professional studio recording, human emotional vocal performance, realistic breathing, natural articulation, warm analog texture, high dynamic range. Create an original Mandarin cinematic mandopop song titled "Tide Says Goodbye for Me", 82 BPM, D major. Female intimate alto, warm lower register with a subtle grain; clear consonant attacks, full vowels, naturally released endings. Story: a person lets the tide deliver an unsaid farewell in a typhoon-lit harbor, moving from restrained grief to gentle release. Felt piano tidal pulse, distant electric-guitar harmonics, deep restrained synth bass, wide emotional strings, tom ensemble, reverse piano tails, ocean ambience. Verse at 35% intensity, pre-chorus 55%, chorus 82%, final line 100% then a natural fall. No robotic AI tone, no excessive tuning, no plastic vocal sheen; authentic close-mic human take. Recording Chain: Neumann U87 Ai, Neve 1073, Universal Audio Apollo x8p, Lexicon PCM96, ATC SCM100ASL Pro, Yamaha NS-10M Studio. Vocal front-center and intimate, cinematic wide stereo field, clean emotional EQ, transparent compression, Lexicon long-tail reverb opening in chorus, mastering -8 LUFS with analog warmth. Live sound design: L-Acoustics K1/K2, SB28, X15 HiQ, DiGiCo Quantum7, LA12X.'
-  },
-  {
-    title: '在黎明关机之前', genre: 'Future Garage × Chinese Electronica',
-    concept: '凌晨的服务器机房里，值夜的人听见城市最后一班车离站。他决定在黎明关机前，给未来留下一段不被删除的心跳。核心情绪是孤独中的微小勇气。',
-    positioning: 'Genre: Future Garage × Chinese Electronica · BPM: 132 · Key: F minor · Mood: electric, lonely, ascending, hopeful · Era: forward-looking 2020s · Target Scene: cyberpunk montage, late-night coding, dawn transit.',
-    lyrics: '【主歌】\n风扇还在替城市失眠\n蓝色光标闪在我的指尖\n最后一班车 穿过空的街\n把明天留给还没醒的人\n\n【副歌】\n在黎明关机之前\n让我再亮一遍\n不是为了被谁看见\n只是心跳不想断电\n当太阳越过天线\n我会把名字写进云里面',
-    voiceTitle: 'Male cinematic tenor · 清亮、微哑、带夜色颗粒的男高音',
-    voiceDetails: '主歌用近乎说唱的轻声叙述，咬字锋利；副歌逐渐拉开头腔与胸腔，像穿过清晨的高架桥。情绪从疏离、疲惫，抵达明亮的执拗。',
-    dynamics: '动态曲线：主歌 32% · 预副歌 48% · 副歌 78% · 尾奏呼喊 100%。',
-    arrangement: '碎拍 UK garage 鼓组以低通滤波开场，古筝颗粒采样切入节奏缝隙；副歌叠加合成器 pad、失真贝斯与男声和声群，最后让单音琵琶穿过噪声。',
-    mix: '干净近讲主唱悬在鼓组上方，左右散布粒子化古筝；sub 保持单声道，副歌的 pad 向两侧扩张。瞬态清晰、侧链呼吸可感，母带保有暗色模拟温度。',
-    directions: [['风扇还在替城市失眠', '“失眠”轻轻下坠，句末留一口短促换气。'], ['最后一班车 穿过空的街', '“穿过”咬字加速，“空”字延长半拍。'], ['让我再亮一遍', '“亮”字抬头推入头腔，力度瞬间升至 80%。'], ['只是心跳不想断电', '“断电”做干脆断句，随后保留可闻的呼吸。']],
-    scores: [95, 96, 94, 93, 92],
-    prompt: 'Cinematic music production, professional studio recording, human emotional vocal performance, realistic breathing, natural articulation, warm analog texture, high dynamic range. Original Mandarin future garage and Chinese electronica, 132 BPM, F minor. Male cinematic tenor with clear bright edge and midnight rasp. A night-shift worker in a server room refuses to let his heartbeat power down before dawn. Filtered UK garage breaks, granular guzheng fragments, dark mono sub bass, luminous synth pads, distorted bass lift, stacked male harmonies, lone pipa note through the outro noise. Verse 32%, pre-chorus 48%, chorus 78%, outro cry 100%. Natural breaths and precise diction; no robotic AI voice, over-tuning, or plastic sheen. Recording Chain: Neumann U87 Ai, Neve 1073, Universal Audio Apollo x8p, Lexicon PCM96, ATC SCM100ASL Pro, Yamaha NS-10M Studio. Front-center vocal, wide cinematic stereo, controlled transient EQ and compression, spacious Lexicon PCM96 reverb, -8 LUFS mastering with analog warmth. Live sound design: L-Acoustics K1/K2, SB28, X15 HiQ, DiGiCo Quantum7, LA12X.'
-  }
+const profiles = [
+  { genre: 'Cinematic Mandopop / Ambient Pop', bpm: 82, key: 'D major', mood: 'nocturnal, tender, cathartic', scene: 'film end credits, oceanfront farewell', voice: 'Female intimate alto', vocal: '温暖中低音带轻微沙砾感；主歌贴耳，副歌打开胸腔而不喊叫。', arrangement: 'felt piano、潮汐感 synth bass、远处电吉他泛音、宽阔弦乐与 tom 组。', mix: '主唱前中置，钢琴窄而清晰，弦乐大幅展开，PCM96 长尾在副歌盛放。', emotion: '克制后的释然', place: '台风前的海港', image: '潮水', titles: ['潮汐替我说再见', '月光停在旧码头'], lines: ['潮水把路灯一盏盏推远', '我把眼泪还给海面', '请相信我 已经走得很远'] },
+  { genre: 'Future Garage × Chinese Electronica', bpm: 132, key: 'F minor', mood: 'electric, lonely, ascending', scene: 'cyberpunk montage, dawn transit', voice: 'Male cinematic tenor', vocal: '清亮微哑，字头锋利；从近乎说唱的叙述推向明亮的头腔。', arrangement: 'filtered UK garage breaks、颗粒古筝、dark mono sub、luminous pads、失真贝斯与琵琶尾音。', mix: '近讲人声悬在碎拍上方，sub 保持单声道，副歌 pad 向两侧扩张。', emotion: '孤独里的勇气', place: '凌晨的服务器机房', image: '蓝色光标', titles: ['在黎明关机之前', '把名字写进云里面'], lines: ['风扇还在替城市失眠', '让我再亮一遍', '只是心跳不想断电'] },
+  { genre: 'Chinese Indie Folk / Chamber Pop', bpm: 96, key: 'A major', mood: 'sunlit, bittersweet, intimate', scene: 'coming-of-age film, train-window montage', voice: 'Female airy mezzo-soprano', vocal: '轻盈、带笑意的气声，咬字柔和但字尾干净；副歌像终于敢承认的想念。', arrangement: 'nylon guitar、手拍、木贝斯、单簧管、室内弦乐和车站环境声。', mix: '人声温暖前置，吉他左右轻分开，单簧管在间奏靠近中央，保留木质动态。', emotion: '迟到的想念', place: '午后开往北方的列车', image: '车窗反光', titles: ['把夏天折进车票', '下一站没有你'], lines: ['车窗把云朵折成两半', '我把夏天折进车票', '下一站没有你 也有风'] },
+  { genre: 'Trip-hop / Orchestral Noir', bpm: 74, key: 'C minor', mood: 'smoky, suspenseful, wounded', scene: 'crime drama credits, rain-soaked city', voice: 'Female cinematic contralto', vocal: '深色低音、略带烟雾感；每个辅音有锋利边缘，高潮压抑地爆发。', arrangement: 'dusty breakbeat、低音提琴拨奏、准备钢琴、反向弦乐、低频铜管与磁带噪声。', mix: '干而近的主唱对比深黑混响，鼓组窄，弦乐只在关键句推向宽幅。', emotion: '带伤的清醒', place: '雨夜的旧城天桥', image: '霓虹倒影', titles: ['雨把证词洗掉', '霓虹不替谁作证'], lines: ['雨把霓虹揉进伤口', '我不再替沉默辩解', '天亮前请把门锁好'] },
+  { genre: 'Afro House / Oriental Dance Pop', bpm: 118, key: 'E minor', mood: 'glowing, liberated, magnetic', scene: 'night festival, fashion runway', voice: 'Male falsetto lead with female response', vocal: '男声轻亮假声领唱，女声以短句回应；呼吸贴着律动，副歌释放而不嘶吼。', arrangement: 'Afro percussion、弹跳 sub、琵琶 pluck、marimba、手鼓群与分层 call-and-response。', mix: '低频集中有弹性，打击乐绕着听者移动，双人声在副歌拉成宽阔对话。', emotion: '重新找回身体', place: '海边凌晨的露天舞池', image: '金色汗水', titles: ['月亮在舞池失重', '把影子跳成火'], lines: ['鼓点从脚踝爬到肩膀', '今夜不必解释自己', '把影子跳成火'] },
+  { genre: 'Post-rock / Chinese Cinematic Ballad', bpm: 68, key: 'G major', mood: 'vast, fragile, healing', scene: 'mountain documentary, reunion finale', voice: 'Male husky baritone', vocal: '宽厚而疲惫的男中音，主歌像自言自语；最后副歌以粗粝真声穿过失真吉他。', arrangement: '指弹吉他、e-bow、弓弦乐、渐强鼓组、失真吉他墙、笛子远景与山风现场声。', mix: '低频留白，主唱稳在中央；吉他墙从两侧缓慢升起，高潮保持可辨的动态层次。', emotion: '漫长后的和解', place: '雪线以下的山路', image: '远处的灯', titles: ['山背后还有灯', '把沉默背上山'], lines: ['风把脚印吹回身后', '山背后还有灯', '我终于学会原谅自己'] }
 ];
-let current = 0;
+
 const $ = (id) => document.querySelector(id);
-function render(work, index) {
-  $('#songNumber').textContent = String(index + 1).padStart(2, '0');
-  $('#songIndex').textContent = `SONG ${String(index + 1).padStart(2, '0')} / 已完成`;
-  $('#songTitle').textContent = work.title; $('#songGenre').textContent = work.genre;
-  $('#concept').textContent = work.concept; $('#positioning').textContent = work.positioning; $('#lyrics').textContent = work.lyrics; $('#prompt').textContent = work.prompt;
-  $('#voiceTitle').textContent = work.voiceTitle; $('#voiceDetails').textContent = work.voiceDetails; $('#dynamics').textContent = work.dynamics; $('#arrangement').textContent = work.arrangement; $('#mix').textContent = work.mix;
+const history = JSON.parse(sessionStorage.getItem('taiyi-history') || '[]');
+let songNumber = Number(sessionStorage.getItem('taiyi-song-number') || '0');
+let currentWork;
+
+function pick(list, salt) { return list[Math.abs(salt) % list.length]; }
+function makeWork(number) {
+  const profile = profiles[(number - 1) % profiles.length];
+  const title = pick(profile.titles, Math.floor((number - 1) / profiles.length));
+  const lineA = pick(profile.lines, number); const lineB = pick(profile.lines, number + 1); const lineC = pick(profile.lines, number + 2);
+  const version = Math.floor((number - 1) / profiles.length) + 1;
+  const lyric = `【主歌】\n${lineA}\n在${profile.place}，我把昨天留在身后\n${lineB}\n让${profile.image}替我记住这一刻\n\n【预副歌】\n原来有些告别 不必说得太响\n只要心还愿意向前\n\n【副歌】\n${title}\n${lineB}\n我不再向旧日借答案\n${lineC}\n当世界慢慢亮起来\n我会带着自己回到人海`;
+  const concept = `第 ${number} 首的故事发生在${profile.place}。主角把无法立刻解决的心事交给${profile.image}，在一个微小的动作里重新向前。情绪核心是「${profile.emotion}」；它不承诺遗忘，只让人有勇气继续生活。`;
+  const intensity = number % 2 ? 'Verse 35%, pre-chorus 55%, chorus 85%, final climax 100%.' : 'Verse 30%, pre-chorus 50%, chorus 80%, bridge 70%, final climax 100%.';
+  const prompt = `Cinematic music production, professional studio recording, human emotional vocal performance, realistic breathing, natural articulation, warm analog texture, high dynamic range. Create an original Mandarin song titled "${title}" (creation ${number}, variation ${version}). ${profile.genre}, ${profile.bpm} BPM, ${profile.key}; mood: ${profile.mood}; target scene: ${profile.scene}. Story: ${concept} ${profile.voice} lead vocal. ${profile.vocal} Preserve natural inhalations and phrase changes, clear consonant attacks, full vowels, naturally released word endings. ${profile.arrangement} ${intensity} Absolutely no robotic AI tone, over-tuning, or plastic vocal sheen; make it feel like an authentic human take. Recording Chain: Microphone Neumann U87 Ai; Preamp Neve 1073; Interface Universal Audio Apollo x8p; Reverb Lexicon PCM96; Monitoring ATC SCM100ASL Pro and Yamaha NS-10M Studio. Vocal placement intimate front-center; cinematic wide stereo field; emotional EQ, transparent compression, dimensional Lexicon reverb. Master at -8 LUFS with analog warmth and preserved transients. Live sound design: L-Acoustics K1/K2, L-Acoustics SB28, L-Acoustics X15 HiQ, DiGiCo Quantum7, LA12X.`;
+  return { number, title, profile, concept, lyric, prompt, scores: [94 + number % 4, 93 + number % 5, 95 + number % 4, 89 + number % 7, 92 + number % 6], directions: [[lineA, '首字轻起，句末留半拍自然吸气；不要剪掉呼吸声。'], [lineB, '中间关键词加重，尾字释放前给非常轻的颤音。'], [title, '这句进入胸腔共鸣，保持音高稳定，推至副歌峰值。'], [lineC, '最后四个字全情推进到 100%，随后不拖拍地回收。']] };
+}
+
+function render(work) {
+  const p = work.profile;
+  $('#songNumber').textContent = String(work.number).padStart(2, '0'); $('#songIndex').textContent = `SONG ${String(work.number).padStart(2, '0')} / 已完成`;
+  $('#songTitle').textContent = work.title; $('#songGenre').textContent = p.genre;
+  $('#concept').textContent = work.concept; $('#positioning').textContent = `Genre: ${p.genre} · BPM: ${p.bpm} · Key: ${p.key} · Mood: ${p.mood} · Era: contemporary / future-facing · Target Scene: ${p.scene}.`;
+  $('#lyrics').textContent = work.lyric; $('#prompt').textContent = work.prompt; $('#voiceTitle').textContent = p.voice; $('#voiceDetails').textContent = p.vocal;
+  $('#dynamics').textContent = '动态曲线：主歌 30%–35% · 预副歌 50%–55% · 副歌 80%–85% · 高潮 100%，最后保留一次真实换气。'; $('#arrangement').textContent = p.arrangement; $('#mix').textContent = p.mix;
   $('#directions').innerHTML = work.directions.map(([line, note], i) => `<article><b>0${i + 1}</b><div><strong>「${line}」</strong><p>${note}</p></div></article>`).join('');
-  const labels = ['原创性', '音乐性', '情绪', '商业潜力', '电影适配'];
-  $('#scores').innerHTML = work.scores.map((score, i) => `<article><span>${labels[i]}</span><strong>${score}</strong><i><b style="width:${score}%"></b></i></article>`).join('');
+  const labels = ['原创性', '音乐性', '情绪', '商业潜力', '电影适配']; $('#scores').innerHTML = work.scores.map((score, i) => `<article><span>${labels[i]}</span><strong>${score}</strong><i><b style="width:${score}%"></b></i></article>`).join('');
 }
-function copyPrompt() {
-  navigator.clipboard?.writeText(works[current].prompt).catch(() => {});
-  const toast = $('#toast'); toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 2400);
+function addArchive(work) {
+  history.unshift({ number: work.number, title: work.title, genre: work.profile.genre }); history.splice(8); sessionStorage.setItem('taiyi-history', JSON.stringify(history));
+  $('#archiveList').innerHTML = history.map((item) => `<li><b>SONG ${String(item.number).padStart(2, '0')}</b><strong>${item.title}</strong><span>${item.genre}</span></li>`).join('');
 }
-function advanceWork(scroll = false) {
-  $('#engineState').textContent = 'COMPOSING'; $('#progressValue').textContent = '—';
-  setTimeout(() => {
-    current = (current + 1) % works.length; render(works[current], current);
-    $('#engineState').textContent = 'WRITING'; $('#progressValue').textContent = '100%';
-    if (scroll) document.querySelector('#song').scrollIntoView({behavior: 'smooth', block: 'start'});
-  }, 620);
+function reportIfNeeded(work) {
+  const report = $('#trendReport');
+  if (work.number % 100 !== 0) { report.hidden = true; return; }
+  report.hidden = false; report.innerHTML = `<p class="eyebrow">AI MUSIC TREND REPORT / 100 WORKS</p><h2>第 ${work.number} 首趋势报告</h2><p>本轮创作覆盖 ${profiles.length} 种差异化声线与编曲方向：电影感叙事、东方电子、木质原声、暗色 trip-hop 与身体律动。下一百首将继续避开已使用的主题组合，并强化短视频钩子、沉浸式空间与真人呼吸感。</p>`;
 }
-$('#createButton').addEventListener('click', () => advanceWork(true));
-$('#copyButton').addEventListener('click', copyPrompt); $('#copyPromptButton').addEventListener('click', copyPrompt);
-let seconds = 24; setInterval(() => {
-  if (seconds === 0) { seconds = 24; advanceWork(false); } else seconds -= 1;
-  $('#nextCycle').textContent = `00:${String(seconds).padStart(2, '0')}`;
-}, 1000);
-render(works[current], current);
+function createNext(scroll = false) {
+  $('#engineState').textContent = 'COMPOSING'; $('#progressValue').textContent = 'IDEATING';
+  setTimeout(() => { songNumber += 1; sessionStorage.setItem('taiyi-song-number', songNumber); currentWork = makeWork(songNumber); render(currentWork); addArchive(currentWork); reportIfNeeded(currentWork); $('#engineState').textContent = 'WRITING'; $('#progressValue').textContent = '100%'; if (scroll) $('#song').scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 520);
+}
+function copyPrompt() { navigator.clipboard?.writeText(currentWork.prompt).catch(() => {}); $('#toast').classList.add('show'); setTimeout(() => $('#toast').classList.remove('show'), 2400); }
+$('#createButton').addEventListener('click', () => createNext(true)); $('#copyButton').addEventListener('click', copyPrompt); $('#copyPromptButton').addEventListener('click', copyPrompt);
+let seconds = 24; setInterval(() => { if (seconds === 0) { seconds = 24; createNext(); } else seconds -= 1; $('#nextCycle').textContent = `00:${String(seconds).padStart(2, '0')}`; }, 1000);
+createNext();

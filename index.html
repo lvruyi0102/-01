@@ -50,6 +50,11 @@
 
     <section class="direction"><div><p class="eyebrow">LINE-BY-LINE DIRECTION</p><h2>逐句演唱指导</h2></div><div id="directions" class="direction-list"></div></section>
     <section class="score"><div><p class="eyebrow">SELF REVIEW</p><h2>自我评价</h2></div><div id="scores" class="score-grid"></div></section>
+    <section class="archive" aria-labelledby="archive-title">
+      <div><p class="eyebrow">AUTONOMOUS ARCHIVE</p><h2 id="archive-title">创作不回头，<em>档案一直向前。</em></h2><p class="archive-copy">引擎会避开已经使用过的主题组合，并将最近完成的作品留在本地会话档案中。</p></div>
+      <ol id="archiveList" class="archive-list" aria-live="polite"></ol>
+    </section>
+    <section class="trend-report" id="trendReport" hidden aria-live="polite"></section>
   </main>
   <footer>浮生太一 AI 音乐创作引擎 · 作品为原创生成；每 100 首自动汇总趋势分析报告。</footer>
   <div class="toast" id="toast" role="status">Prompt 已复制，可直接投入音乐生成模型。</div>
